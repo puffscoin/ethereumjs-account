@@ -1,6 +1,6 @@
 import * as rlp from 'rlp'
 
-const ethUtil = require('ethereumjs-util')
+const puffsUtil = require('puffscoinjs-util')
 const Buffer = require('safe-buffer').Buffer
 
 interface TrieGetCb {
@@ -80,16 +80,16 @@ export default class Account {
       {
         name: 'stateRoot',
         length: 32,
-        default: ethUtil.KECCAK256_RLP,
+        default: puffsUtil.KECCAK256_RLP,
       },
       {
         name: 'codeHash',
         length: 32,
-        default: ethUtil.KECCAK256_NULL,
+        default: puffsUtil.KECCAK256_NULL,
       },
     ]
 
-    ethUtil.defineProperties(this, fields, data)
+    puffsUtil.defineProperties(this, fields, data)
   }
 
   /**
@@ -105,12 +105,12 @@ export default class Account {
    *
    */
   isContract(): boolean {
-    return this.codeHash.toString('hex') !== ethUtil.KECCAK256_NULL_S
+    return this.codeHash.toString('hex') !== puffsUtil.KECCAK256_NULL_S
   }
 
   /**
    * Fetches the code from the trie.
-   * @param trie The [trie](https://github.com/ethereumjs/merkle-patricia-tree) storing the accounts
+   * @param trie The [trie](https://github.com/puffscoin/merkle-patricia-tree) storing the accounts
    * @param cb The callback
    */
   getCode(trie: Trie, cb: TrieGetCb): void {
@@ -152,15 +152,15 @@ export default class Account {
    * })
    * ~~~
    *
-   * @param trie The [trie](https://github.com/ethereumjs/merkle-patricia-tree) storing the accounts.
+   * @param trie The [trie](https://github.com/puffscoin/merkle-patricia-tree) storing the accounts.
    * @param {Buffer} code
    * @param cb The callback.
    *
    */
   setCode(trie: Trie, code: Buffer, cb: (err: any, codeHash: Buffer) => void): void {
-    this.codeHash = ethUtil.keccak256(code)
+    this.codeHash = puffsUtil.keccak256(code)
 
-    if (this.codeHash.toString('hex') === ethUtil.KECCAK256_NULL_S) {
+    if (this.codeHash.toString('hex') === puffsUtil.KECCAK256_NULL_S) {
       cb(null, Buffer.alloc(0))
       return
     }
@@ -233,7 +233,7 @@ export default class Account {
     return (
       this.balance.toString('hex') === '' &&
       this.nonce.toString('hex') === '' &&
-      this.codeHash.toString('hex') === ethUtil.KECCAK256_NULL_S
+      this.codeHash.toString('hex') === puffsUtil.KECCAK256_NULL_S
     )
   }
 }
