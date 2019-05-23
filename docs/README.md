@@ -1,4 +1,4 @@
-# ethereumjs-account
+# puffscoinjs-account
 
 ## Index
 
