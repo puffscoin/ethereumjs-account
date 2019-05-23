@@ -1,7 +1,7 @@
 {
-  "name": "ethereumjs-account",
+  "name": "puffscoinjs-account",
   "version": "3.0.0",
-  "description": "Encoding, decoding and validation of Ethereum's Account schema",
+  "description": "Encoding, decoding and validation of PUFFScoin's Account schema",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -9,21 +9,21 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethereumjs/ethereumjs-account.git"
+    "url": "git+https://github.com/puffscoin/puffscoinjs-account.git"
   },
   "scripts": {
-    "build": "ethereumjs-config-build",
+    "build": "puffscoinjs-config-build",
     "prepublishOnly": "npm run test && npm run build",
-    "coverage": "ethereumjs-config-coverage",
-    "coveralls": "ethereumjs-config-coveralls",
+    "coverage": "puffscoinjs-config-coverage",
+    "coveralls": "puffscoinjs-config-coveralls",
     "docs:build": "typedoc --out docs --mode file --readme none --theme markdown --mdEngine github --excludeNotExported src",
-    "format": "ethereumjs-config-format",
-    "format:fix": "ethereumjs-config-format-fix",
-    "tslint": "ethereumjs-config-tslint",
-    "tslint:fix": "ethereumjs-config-tslint-fix",
-    "tsc": "ethereumjs-config-tsc",
-    "lint": "ethereumjs-config-lint",
-    "lint:fix": "ethereumjs-config-lint-fix",
+    "format": "puffscoinjs-config-format",
+    "format:fix": "puffscoinjs-config-format-fix",
+    "tslint": "puffscoinjs-config-tslint",
+    "tslint:fix": "puffscoinjs-config-tslint-fix",
+    "tsc": "puffscoinjs-config-tsc",
+    "lint": "puffscoinjs-config-lint",
+    "lint:fix": "puffscoinjs-config-lint-fix",
     "test": "ts-node node_modules/tape/bin/tape ./test/index.ts"
   },
   "husky": {
@@ -32,25 +32,25 @@
     }
   },
   "keywords": [
-    "ethereum",
+    "puffscoin",
     "account"
   ],
   "author": "mjbecze (mjbecze@gmail.com)",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/ethereumjs/ethereumjs-account/issues"
+    "url": "https://github.com/puffscoin/puffscoinjs-account/issues"
   },
-  "homepage": "https://github.com/ethereumjs/ethereumjs-account#readme",
+  "homepage": "https://github.com/puffscoin/puffscoinjs-account#readme",
   "dependencies": {
-    "ethereumjs-util": "^6.0.0",
+    "puffscoinjs-util": "^6.0.0",
     "rlp": "^2.2.1",
     "safe-buffer": "^5.1.1"
   },
   "devDependencies": {
-    "@ethereumjs/config-nyc": "^1.1.0",
-    "@ethereumjs/config-prettier": "^1.1.0",
-    "@ethereumjs/config-tsc": "^1.1.0",
-    "@ethereumjs/config-tslint": "^1.1.0",
+    "@puffscoinjs/config-nyc": "^1.1.0",
+    "@puffscoinjs/config-prettier": "^1.1.0",
+    "@puffscoinjs/config-tsc": "^1.1.0",
+    "@puffscoinjs/config-tslint": "^1.1.0",
     "@types/bn.js": "^4.11.3",
     "@types/node": "^11.9.4",
     "@types/tape": "^4.2.33",
