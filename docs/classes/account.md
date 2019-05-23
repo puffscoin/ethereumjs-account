@@ -249,7 +249,7 @@ account.setCode(trie, code, function(err, codeHash) {
 
 | Name | Type       | Description                                                                          |
 | ---- | ---------- | ------------------------------------------------------------------------------------ |
-| trie | `Trie`     | The [trie](https://github.com/ethereumjs/merkle-patricia-tree) storing the accounts. |
+| trie | `Trie`     | The [trie](https://github.com/puffscoin/merkle-patricia-tree) storing the accounts. |
 | code | `Buffer`   | \-                                                                                   |
 | cb   | `function` | The callback.<br><br>                                                                |
 
