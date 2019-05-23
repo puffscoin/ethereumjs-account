@@ -1,4 +1,4 @@
-[ethereumjs-account](../README.md) > [Account](../classes/account.md)
+[puffscoinjs-account](../README.md) > [Account](../classes/account.md)
 
 # Class: Account
 
@@ -39,7 +39,7 @@
 
 ⊕ **new Account**(data?: _`any`_): [Account](account.md)
 
-_Defined in [index.ts:41](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L41)_
+_Defined in [index.ts:41](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L41)_
 
 Creates a new account object
 
@@ -79,7 +79,7 @@ const account = new Account(data)
 
 **● balance**: _`Buffer`_
 
-_Defined in [index.ts:31](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L31)_
+_Defined in [index.ts:31](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L31)_
 
 The account's balance in wei.
 
@@ -91,7 +91,7 @@ The account's balance in wei.
 
 **● codeHash**: _`Buffer`_
 
-_Defined in [index.ts:41](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L41)_
+_Defined in [index.ts:41](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L41)_
 
 The hash of the code of the contract.
 
@@ -103,7 +103,7 @@ The hash of the code of the contract.
 
 **● nonce**: _`Buffer`_
 
-_Defined in [index.ts:26](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L26)_
+_Defined in [index.ts:26](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L26)_
 
 The account's nonce.
 
@@ -115,7 +115,7 @@ The account's nonce.
 
 **● stateRoot**: _`Buffer`_
 
-_Defined in [index.ts:36](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L36)_
+_Defined in [index.ts:36](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L36)_
 
 The stateRoot for the storage of the contract.
 
@@ -129,7 +129,7 @@ The stateRoot for the storage of the contract.
 
 ▸ **getCode**(trie: _`Trie`_, cb: _`TrieGetCb`_): `void`
 
-_Defined in [index.ts:116](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L116)_
+_Defined in [index.ts:116](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L116)_
 
 Fetches the code from the trie.
 
@@ -137,7 +137,7 @@ Fetches the code from the trie.
 
 | Name | Type        | Description                                                                         |
 | ---- | ----------- | ----------------------------------------------------------------------------------- |
-| trie | `Trie`      | The [trie](https://github.com/ethereumjs/merkle-patricia-tree) storing the accounts |
+| trie | `Trie`      | The [trie](https://github.com/[puffscoin/merkle-patricia-tree) storing the accounts |
 | cb   | `TrieGetCb` | The callback                                                                        |
 
 **Returns:** `void`
@@ -150,7 +150,7 @@ Fetches the code from the trie.
 
 ▸ **getStorage**(trie: _`Trie`_, key: _`Buffer` \| `string`_, cb: _`TrieGetCb`_): `void`
 
-_Defined in [index.ts:179](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L179)_
+_Defined in [index.ts:179](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L179)_
 
 Fetches `key` from the account's storage.
 
@@ -172,7 +172,7 @@ Fetches `key` from the account's storage.
 
 ▸ **isContract**(): `boolean`
 
-_Defined in [index.ts:107](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L107)_
+_Defined in [index.ts:107](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L107)_
 
 Returns a `Boolean` deteremining if the account is a contract.
 
@@ -186,7 +186,7 @@ Returns a `Boolean` deteremining if the account is a contract.
 
 ▸ **isEmpty**(): `boolean`
 
-_Defined in [index.ts:232](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L232)_
+_Defined in [index.ts:232](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L232)_
 
 Returns a `Boolean` determining if the account is empty.
 
@@ -200,7 +200,7 @@ Returns a `Boolean` determining if the account is empty.
 
 ▸ **serialize**(): `Buffer`
 
-_Defined in [index.ts:99](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L99)_
+_Defined in [index.ts:99](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L99)_
 
 Returns the RLP serialization of the account as a `Buffer`.
 
@@ -214,7 +214,7 @@ Returns the RLP serialization of the account as a `Buffer`.
 
 ▸ **setCode**(trie: _`Trie`_, code: _`Buffer`_, cb: _`function`_): `void`
 
-_Defined in [index.ts:160](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L160)_
+_Defined in [index.ts:160](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L160)_
 
 Stores the code in the trie.
 
@@ -263,7 +263,7 @@ account.setCode(trie, code, function(err, codeHash) {
 
 ▸ **setStorage**(trie: _`Trie`_, key: _`Buffer` \| `string`_, val: _`Buffer` \| `string`_, cb: _`function`_): `void`
 
-_Defined in [index.ts:218](https://github.com/ethereumjs/ethereumjs-account/blob/be66a6a/src/index.ts#L218)_
+_Defined in [index.ts:218](https://github.com/puffscoin/puffscoinjs-account/blob/be66a6a/src/index.ts#L218)_
 
 Stores a `val` at the `key` in the contract's storage.
 
