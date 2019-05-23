@@ -14,7 +14,7 @@ class structure of the `Account` class. `TypeScript` handles `ES6` transpilation
 end: cleaner) than `babel` so `require` syntax of the library slightly changes to:
 
 ```javascript
-let Account = require('ethereumjs-account').default
+let Account = require('puffscoinjs-account').default
 ```
 
 The library now also comes with a **type declaration file** distributed along with the package published.
